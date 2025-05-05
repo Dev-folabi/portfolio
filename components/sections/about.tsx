@@ -7,8 +7,8 @@ export default function About() {
     { category: "Frameworks", items: ["Express.js", "Next.js"] },
     { category: "ORMs", items: ["Prisma", "Mongoose"] },
     { category: "Databases", items: ["PostgreSQL", "MongoDB"] },
-    { category: "DevOps/Tools", items: ["Docker", "GitHub Actions", "Brevo", "Binance Pay", "GatePay", "NowPayments"] },
-    { category: "APIs", items: ["OpenAI"] },
+    { category: "DevOps/Tools", items: ["Docker", "GitHub Actions", "Radis", "Paystack", "Brevo", "Binance Pay", "GatePay", "NowPayments"] },
+    { category: "APIs", items: ["OpenAI", "Gemini",] },
   ]
 
   return (
@@ -26,9 +26,14 @@ export default function About() {
             <Card className="border-indigo-100 dark:border-indigo-900 h-full">
               <CardContent className="pt-6 pb-6">
                 <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed h-full">
-                  I'm a backend engineer who specializes in building robust systems using TypeScript, Node.js (Express),
-                  and databases like PostgreSQL and MongoDB. I enjoy working on SaaS platforms, AI integrations, and
-                  fintech products. I'm currently the backend engineer behind{" "}
+                  I'm a passionate backend engineer with extensive experience in architecting and developing scalable, 
+                  high-performance systems. My expertise lies in building robust server-side applications using TypeScript 
+                  and Node.js (Express), complemented by strong database management skills with PostgreSQL and MongoDB. 
+                  I specialize in developing microservices architectures, implementing RESTful APIs, and ensuring optimal 
+                  system performance. With a deep understanding of SaaS platforms, I've successfully integrated various AI 
+                  solutions and developed secure fintech applications with a focus on payment processing and data security. 
+                  I'm particularly skilled in implementing clean architecture patterns, handling real-time data processing, 
+                  and maintaining high-availability systems. I'm currently the lead backend engineer behind{" "}
                   <span className="font-semibold text-indigo-600 dark:text-indigo-400">Mentor AI</span>,{" "}
                   <span className="font-semibold text-indigo-600 dark:text-indigo-400">EduStack</span>, and{" "}
                   <span className="font-semibold text-indigo-600 dark:text-indigo-400">Nesterlify</span>.

@@ -9,6 +9,8 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Github, Mail, Linkedin, Send } from "lucide-react"
 import { useToast } from "@/hooks/use-toast"
+import emailjs from '@emailjs/browser';
+
 
 export default function Contact() {
   const { toast } = useToast()
@@ -28,16 +30,34 @@ export default function Contact() {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000))
+    try {
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+          to_email: process.env.NEXT_PUBLIC_EMAIL,
+        },
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+      );
 
-    toast({
-      title: "Message sent!",
-      description: "Thanks for reaching out. I'll get back to you soon.",
-    })
+      toast({
+        title: "Message sent!",
+        description: "Thanks for reaching out. I'll get back to you soon.",
+      })
 
-    setFormData({ name: "", email: "", message: "" })
-    setIsSubmitting(false)
+      setFormData({ name: "", email: "", message: "" })
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again.",
+        variant: "destructive"
+      })
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -175,7 +195,7 @@ export default function Contact() {
                   <Linkedin className="h-6 w-6 text-indigo-600 dark:text-indigo-400 mr-3" />
                   <div>
                     <h3 className="font-medium text-gray-900 dark:text-white">LinkedIn</h3>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">yusuf-afolabi-ba3461145</p>
+                    <p className="text-sm text-gray-500 dark:text-gray-400">Yusuf Afolabi</p>
                   </div>
                 </a>
 

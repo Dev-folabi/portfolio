@@ -19,7 +19,7 @@ export function ThemeToggle() {
       <Button
         variant="outline"
         size="icon"
-        className="rounded-full bg-white/10 backdrop-blur-sm border-indigo-200 dark:border-indigo-800 opacity-0"
+        className="rounded-full bg-white/10 backdrop-blur-sm border-indigo-200 dark:border-indigo-800 opacity-0 z-50"
       >
         <Sun className="h-5 w-5" />
         <span className="sr-only">Loading theme</span>

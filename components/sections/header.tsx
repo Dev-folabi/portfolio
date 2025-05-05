@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
+import { ThemeToggle } from "@/components/theme-toggle";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -27,22 +28,25 @@ const Header = () => {
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <Link href="/" className="text-2xl font-bold">
-            Yusuf
+            YA
           </Link>
           
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex space-x-8 mr-12">
             <Link href="#about" className="hover:text-primary transition-colors">
               About
             </Link>
             <Link href="#projects" className="hover:text-primary transition-colors">
               Projects
             </Link>
-            <Link href="#skills" className="hover:text-primary transition-colors">
+            {/* <Link href="#skills" className="hover:text-primary transition-colors">
               Skills
-            </Link>
+            </Link> */}
             <Link href="#contact" className="hover:text-primary transition-colors">
               Contact
             </Link>
+          <div className="fixed top-4 right-4">
+        <ThemeToggle />
+      </div>
           </div>
         </div>
       </nav>

@@ -1,25 +1,27 @@
-'use client'
+"use client";
 
-import Link from 'next/link'
-import { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
+import Link from "next/link";
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import { ThemeToggle } from "@/components/theme-toggle";
 
 const Header = () => {
-  const [isScrolled, setIsScrolled] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
-    }
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <motion.header 
+    <motion.header
       className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white/80 backdrop-blur-sm shadow-md' : 'bg-transparent'
+        isScrolled
+          ? "bg-white/80 dark:bg-gray-950/80 backdrop-blur-sm shadow-md dark:shadow-gray-800/30"
+          : "bg-transparent"
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
@@ -27,31 +29,43 @@ const Header = () => {
     >
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <Link href="/" className="text-2xl font-bold">
+          <Link
+            href="/"
+            className="text-2xl font-bold text-gray-900 dark:text-white"
+          >
             YA
           </Link>
-          
+
           <div className="hidden md:flex space-x-8 mr-12">
-            <Link href="#about" className="hover:text-primary transition-colors">
+            <Link
+              href="#about"
+              className="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+            >
               About
             </Link>
-            <Link href="#projects" className="hover:text-primary transition-colors">
+            <Link
+              href="#projects"
+              className="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+            >
               Projects
             </Link>
             {/* <Link href="#skills" className="hover:text-primary transition-colors">
               Skills
             </Link> */}
-            <Link href="#contact" className="hover:text-primary transition-colors">
+            <Link
+              href="#contact"
+              className="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+            >
               Contact
             </Link>
-          <div className="fixed top-4 right-4">
-        <ThemeToggle />
-      </div>
+            <div className="fixed top-4 right-4">
+              <ThemeToggle />
+            </div>
           </div>
         </div>
       </nav>
     </motion.header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

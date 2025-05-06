@@ -35,7 +35,7 @@ const Header = () => {
           >
             <div className="flex items-center">
               <span className="text-2xl font-extrabold bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400 bg-clip-text text-transparent">
-                "YA"
+                YA
               </span>
             </div>
           </Link>

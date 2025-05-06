@@ -4,12 +4,10 @@ import Projects from "@/components/sections/projects";
 import Experience from "@/components/sections/experience";
 import Skills from "@/components/sections/skills";
 import Contact from "@/components/sections/contact";
-import Header from "@/components/sections/header";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-white dark:bg-gray-950">
-      <Header />
       <Hero />
       <About />
       <Projects />

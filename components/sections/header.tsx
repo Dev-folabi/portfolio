@@ -33,7 +33,11 @@ const Header = () => {
             href="/"
             className="text-2xl font-bold text-gray-900 dark:text-white"
           >
-            YA
+            <div className="flex items-center">
+              <span className="text-2xl font-extrabold bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400 bg-clip-text text-transparent">
+                "YA"
+              </span>
+            </div>
           </Link>
 
           <div className="hidden md:flex space-x-8 mr-12">

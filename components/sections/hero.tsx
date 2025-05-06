@@ -33,9 +33,9 @@ export default function Hero() {
         </h1>
 
         <p className="mt-6 text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-          I build scalable backend systems and intelligent platforms that power
-          real-world applications — from school management to AI mentorship and
-          crypto-enabled bookings.
+          I build scalable backend systems and and intelligent full-stack
+          platforms powering real-world products — from school management tools
+          to AI-driven mentorship and crypto-enabled booking platforms.
         </p>
 
         <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">

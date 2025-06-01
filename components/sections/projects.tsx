@@ -7,10 +7,12 @@ export default function Projects() {
       demoUrl: "https://nesterlify-frontend2.vercel.app/",
       description:
         "A crypto-powered booking system for flights, cars, and vacations. Built for a client and supports only crypto payments.",
-      techStack: ["MongoDB", "Mongoose", "Brevo", "Binance Pay", "NowPayments"],
+      techStack: ["TypeScript", "Express.js", "MongoDB", "Binance Pay",],
       highlights: [
-        "Integrated Binance Pay and GatePay",
-        "Built secure booking and notification flow",
+        "Built secure booking system for flight, car, and vacations",
+        "Integrated Binance Pay and GatePay for seamless crypto transactions",
+        "Developed wallet payment verification and fallback handling",
+        "Handled customer notifications via Brevo (email and SMS)",
       ],
     },
     {
@@ -31,8 +33,11 @@ export default function Projects() {
         "A SaaS school management system with features like CBT, session/term handling, class/section management, and result uploads.",
       techStack: ["TypeScript", "Express.js", "Prisma ORM", "PostgreSQL"],
       highlights: [
-        "Supports multi-school setup",
-        "Built CBT engine and student promotion logic",
+        "Supports multi-school setup with isolated data access",
+    "Built CBT engine and student promotion logic",
+    "Implemented session/term switching and archival",
+    "Handled role-based permissions for admins, staff, and parents",
+    "Developed dynamic report card and result upload system",
       ],
     },
     {
@@ -41,11 +46,10 @@ export default function Projects() {
       description:
         "A multilingual AI career mentor platform (In Development) offering tailored learning paths, mock interviews, real-time coaching, and integration with OpenAI.",
       techStack: [
-        "Next.js",
         "TypeScript",
-        "Express.js",
+        "Nest.js",
+        "Next.js",
         "PostgreSQL",
-        "MongoDB",
         "OpenAI API",
       ],
       highlights: [
@@ -58,14 +62,20 @@ export default function Projects() {
       demoUrl: "https://declutmart.com",
       description: "A product decluttering marketplace backend.",
       techStack: ["Express.js", "TypeScript", "MongoDB"],
-      highlights: ["Handled product listings, user roles, and order processing"],
+      highlights: ["Handled product listings, user roles, and order processing",
+    "Implemented user authentication and authorization",
+    "Built real-time order status updates with WebSockets",
+    "Structured scalable APIs for buyer-seller interactions",],
     },
     {
       title: "JAMB Focus",
       demoUrl: "https://jambfocus.com",
       description: "A CBT-focused learning platform.",
       techStack: ["Express.js", "MongoDB", "Node.js"],
-      highlights: ["Backend engineer for quiz logic and performance tracking"],
+      highlights: [  "Backend engineer for quiz logic and performance tracking",
+        "Developed timed CBT quizzes with auto-submission logic",
+        "Enabled subject-based question generation and scoring",
+        "Tracked student performance analytics over time"],
     },
   ];
   

@@ -28,14 +28,13 @@ export default function Hero() {
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-4">
           <span className="block">Yusuf Afolabi</span>
           <span className="block mt-2 text-indigo-600 dark:text-indigo-400 text-2xl sm:text-3xl md:text-4xl">
-            Backend Engineer | SaaS & AI Platform Developer
+            Backend Engineer | Building Scalable Systems for Startups & SaaS
           </span>
         </h1>
 
         <p className="mt-6 text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-          I build scalable backend systems and and intelligent full-stack
-          platforms powering real-world products — from school management tools
-          to AI-driven mentorship and crypto-enabled booking platforms.
+          I build production-ready backend systems powering real-world products
+          — from payments and marketplaces to multi-tenant SaaS platforms.
         </p>
 
         <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">

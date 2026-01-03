@@ -3,24 +3,46 @@ import { Badge } from "@/components/ui/badge";
 
 export default function About() {
   const techStack = [
-    { category: "Languages", items: ["TypeScript", "JavaScript"] },
-    { category: "Frameworks", items: ["Express.js", "Next.js"] },
-    { category: "ORMs", items: ["Prisma", "Mongoose"] },
-    { category: "Databases", items: ["PostgreSQL", "MongoDB"] },
     {
-      category: "DevOps/Tools",
+      category: "Languages",
+      items: ["JavaScript", "TypeScript"],
+    },
+    {
+      category: "Backend Frameworks",
+      items: ["Node.js", "Express.js", "NestJS"],
+    },
+    {
+      category: "Databases",
+      items: ["PostgreSQL", "MongoDB"],
+    },
+    {
+      category: "ORM / Data Access",
+      items: ["Prisma", "Mongoose"],
+    },
+    {
+      category: "Caching & Messaging",
+      items: ["Redis"],
+    },
+    {
+      category: "Real-Time Systems",
+      items: ["Socket.IO"],
+    },
+    {
+      category: "Tools",
+      items: ["Git", "GitHub"],
+    },
+    {
+      category: "Cloud & DevOps",
       items: [
+        "DigitalOcean",
+        "AWS (EC2-level)",
         "Docker",
         "GitHub Actions",
-        "Radis",
-        "Paystack",
-        "Brevo",
-        "Binance Pay",
-        "GatePay",
-        "NowPayments",
+        "Nginx",
+        "MongoDB Atlas",
+        "PostgreSQL (Managed)",
       ],
     },
-    { category: "APIs", items: ["OpenAI", "Gemini"] },
   ];
 
   return (
@@ -40,33 +62,26 @@ export default function About() {
           <div className="lg:col-span-2">
             <Card className="border-indigo-100 dark:border-indigo-900 h-full">
               <CardContent className="pt-6 pb-6">
-                <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed h-full">
-                  I'm a passionate backend engineer with extensive experience in
-                  architecting and developing scalable, high-performance
-                  systems. I specialize in building robust server-side
-                  applications with TypeScript and Node.js (Express), alongside
-                  strong database expertise in PostgreSQL and MongoDB. My core
-                  strengths include developing microservices architectures,
-                  implementing RESTful APIs, and optimizing system performance.
-                  I have a deep understanding of SaaS platforms, with proven
-                  experience integrating AI solutions and building secure
-                  fintech applications focused on payment processing and data
-                  security. I'm particularly skilled in clean architecture
-                  patterns, real-time data processing, and maintaining
-                  high-availability systems. Currently, I serve as the lead
-                  backend engineer behind{" "}
-                  <span className="font-semibold text-indigo-600 dark:text-indigo-400">
-                    Mentor AI
-                  </span>
-                  ,{" "}
-                  <span className="font-semibold text-indigo-600 dark:text-indigo-400">
-                    EduStack
-                  </span>
-                  , and{" "}
-                  <span className="font-semibold text-indigo-600 dark:text-indigo-400">
-                    Nesterlify
-                  </span>
-                  .
+                <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
+                  Product-focused Backend Engineer with 4+ years of experience
+                  building secure, scalable backend systems for real-world
+                  products.
+                  <br />
+                  <br />
+                  I’ve worked across fintech and SaaS, shipping production
+                  systems at Xedla-Pay, building a crypto-powered booking
+                  platform (Nesterlify), and developing EduStack — a
+                  multi-tenant school management SaaS.
+                  <br />
+                  <br />
+                  I specialize in designing clean REST APIs, authentication
+                  systems, data models, and backend architectures that align
+                  with product and business goals.
+                  <br />
+                  <br />
+                  With full-stack experience in Next.js and hands-on cloud
+                  deployments, I help startups ship backend systems that are
+                  reliable, maintainable, and production-ready.
                 </p>
               </CardContent>
             </Card>
